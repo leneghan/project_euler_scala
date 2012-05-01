@@ -31,8 +31,4 @@ class Problem_02_Test  extends FunSuite with ShouldMatchers {
   test("should calculate first 10 Fibonacci numbers") {
     fibs.take(10).toList should equal(List(0, 1, 1, 2, 3, 5, 8, 13, 21, 34))
   }
-
-  test("fibs2 should calculate first 10 Fibonacci numbers") {
-    fibs2.take(10).toList should equal(List(0, 1, 1, 2, 3, 5, 8, 13, 21, 34))
-  }
 }
