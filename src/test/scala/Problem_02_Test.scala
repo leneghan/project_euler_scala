@@ -1,3 +1,5 @@
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 import Problem_02._
 import org.scalatest.FunSuite
 import org.scalatest.matchers.ShouldMatchers
@@ -10,6 +12,7 @@ import org.scalatest.matchers.ShouldMatchers
  *
  */
 
+@RunWith(classOf[JUnitRunner])
 class Problem_02_Test  extends FunSuite with ShouldMatchers {
 
   test("should sum all even Fibonacci numbers less than 10") {

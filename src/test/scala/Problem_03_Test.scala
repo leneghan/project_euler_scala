@@ -1,3 +1,5 @@
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 import Problem_03._
 import org.scalatest.FunSuite
 import org.scalatest.matchers.ShouldMatchers
@@ -9,6 +11,7 @@ import org.scalatest.matchers.ShouldMatchers
  *
  */
 
+@RunWith(classOf[JUnitRunner])
 class Problem_03_Test extends FunSuite with ShouldMatchers {
 
   test("the Largest Prime Of 13195 should be 29") {

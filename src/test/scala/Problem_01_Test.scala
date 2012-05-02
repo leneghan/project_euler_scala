@@ -1,3 +1,5 @@
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 import org.scalatest.matchers.ShouldMatchers
 import org.scalatest.FunSuite
 import Problem_01._
@@ -9,7 +11,7 @@ import Problem_01._
  *
  */
 
-
+@RunWith(classOf[JUnitRunner])
 class Problem_01_Test extends FunSuite with ShouldMatchers {
 
   test("Get multiples below 10") {
