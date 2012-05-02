@@ -31,7 +31,7 @@ object Problem_02 {
 
   def getFib(x:Int):Int =
     x match {
-      case a if (x < 2) => a
+      case a if (a < 2) => a
       case _            => getFib(x-1) + getFib(x-2)
     }
 
