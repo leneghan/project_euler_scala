@@ -8,9 +8,11 @@
 
 object Problem_05 {
 
-  def smallestDivisorOf(from: Int, to: Int): Int ={
-    val divs = List.range(from, to)
-    Stream.range(to, Int.MaxValue, to)
+  def smallestDivisorOf(min: Int, max: Int): Int ={
+
+    val divs = List.range(min, max)
+
+    Stream.range(max, Int.MaxValue, max)
       .find(x => divs.forall(x%_ == 0))
       .get
   }

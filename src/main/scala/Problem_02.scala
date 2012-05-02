@@ -14,12 +14,13 @@ object Problem_02 {
 
   def sumFibBelow(max:Int, stream:Iterable[Int]):Int =
     stream head match{
-      case x:Int if x > max   => 0
-      case x:Int if isEven(x) => x + sumFibBelow(max,  stream tail)
+      case x if x > max   => 0
+      case x if isEven(x) => x + sumFibBelow(max,  stream tail)
       case _                  => sumFibBelow(max,  stream tail)
     }
 
-  def isEven(x:Int) = x%2 == 0
+  def isEven(x:Int) =
+    x%2 == 0
 
   val fibs:Stream[Int] =
     cons(0,
@@ -29,10 +30,10 @@ object Problem_02 {
 
   def sumTuple(t: (Int, Int)):Int = t._1 + t._2
 
-  def getFib(x:Int):Int =
-    x match {
-      case a if (a < 2) => a
-      case _            => getFib(x-1) + getFib(x-2)
+  def getFib(num:Int):Int =
+    num match {
+      case x if (x < 2) => x
+      case x            => getFib(x-1) + getFib(x-2)
     }
 
 }

@@ -16,11 +16,12 @@ object Problem_04 {
       .filter(isPalindrome)
       .max
 
-  def allProducts(from:Int, to:Int):Iterable[(Int, Int)] =
-    range(from, to).flatMap(x => range(from, to).map((x, _)))
+  def allProducts(min:Int, max:Int):Iterable[(Int, Int)] =
+    (min to max) flatMap (x => (min to max) map ((x, _)))
+
+  def multiply(t: (Int, Int)):Int =
+    t._1 * t._2
 
   def isPalindrome(x:Int):Boolean =
     x.toString == x.toString.reverse
-
-  def multiply(t: (Int, Int)):Int = t._1 * t._2
 }

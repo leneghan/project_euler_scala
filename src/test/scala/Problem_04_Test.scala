@@ -1,4 +1,6 @@
+import org.junit.runner.RunWith
 import org.scalatest.FunSuite
+import org.scalatest.junit.JUnitRunner
 import org.scalatest.matchers.ShouldMatchers
 import Problem_04._
 
@@ -10,6 +12,7 @@ import Problem_04._
  *
  */
 
+@RunWith(classOf[JUnitRunner])
 class Problem_04_Test extends FunSuite with ShouldMatchers {
 
   test("The largest palindrome made from the product of two 2-digit numbers is 9009") {

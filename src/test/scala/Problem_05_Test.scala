@@ -1,4 +1,6 @@
+import org.junit.runner.RunWith
 import org.scalatest.FunSuite
+import org.scalatest.junit.JUnitRunner
 import org.scalatest.matchers.ShouldMatchers
 import Problem_05._
 
@@ -10,13 +12,14 @@ import Problem_05._
  *
  */
 
+@RunWith(classOf[JUnitRunner])
 class Problem_05_Test extends FunSuite with ShouldMatchers {
 
   test("The smallest number divided by the numbers 1 to 10 without any remainder is 2520"){
     smallestDivisorOf(1, 10) should equal (2520)
   }
 
-  test("The smallest number divided by the numbers 1 to 20 without any remainder is 2520"){
+  test("The smallest number divided by the numbers 1 to 20 without any remainder is 232792560"){
     smallestDivisorOf(1, 20) should equal (232792560)
   }
 }

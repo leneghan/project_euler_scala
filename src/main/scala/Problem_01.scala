@@ -8,12 +8,18 @@ import collection.immutable.IndexedSeq
  */
 
 object Problem_01 {
-  def sumMultiplesBelow(x: Int): Int = getMultiplesBelow(x).sum
 
-  def isMultipleOf3Or5(x: Int) = x % 3 == 0 || x % 5 == 0
+  def sumMultiplesBelow(x: Int): Int =
+    getMultiplesBelow(x)
+      .sum
 
-  def getMultiplesBelow(upto: Int): IndexedSeq[Int] = {
-    (1 to upto - 1).filter(isMultipleOf3Or5)
-  }
+  def getMultiplesBelow(max: Int): IndexedSeq[Int] =
+    (1 to max - 1)
+      .filter(isMultipleOf3or5)
 
+  def isMultipleOf3or5(x: Int) =
+    isFactorOf(x, 3) || isFactorOf(x, 5)
+
+  def isFactorOf(num: Long, factor: Long):Boolean  =
+    num % factor == 0
 }
